@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DrinkWorks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/colors.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+
+    <link rel="stylesheet" type="text/css" href="./css/props-1.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
+    <script src="//cdn.evrythng.com/toolkit/evrythng-js-sdk/evrythng-4.7.1.min.js"></script>
+  </head>
+  <body class="bg-white">
+
+  <div id="main" class="main t-0 pos-a d-f j-c-center a-i-center fx-c">
+
+    <div class="home">
+      <div class="w-100p pos-a t-0 l-0 ms-p-l-3 p-t-2 t-a-c ms-t-a-l">
+          <img  class="pos-r w-8rem" src="./images/logo-dark.png">
+      </div>
+
+      <div class="w-80p ms-w-100p pos-r t-a-c fg-white">
+        <div class=" pos-r t-a-c m-a">
+          <h1 class="f-s-xl ms-f-s-xxl max-w-720px m-a">SMART TEXTILES FOR THE FUTURE.</h1>
+        </div>
+      </div>
+
+      <div class="w-100p pos-r t-0 l-0 t-a-c p-t-3 fg-white p-t-5">
+  <!--         <input class="email-text w-80p ms-w-30p f-s-s h-3rem bd-b fg-white" type='text' placeholder="Enter An Address" /> <br> -->
+          <button class="email-button w-80p ms-w-30p pos-r f-s-s h-3rem bg-red m-t-1 bd-none fg-white p-h-1 f-w-700">Scan A RFID Thread</button> <br>
+          <div id="textdiv" class="textdiv w-80p ms-w-a p-t-2 pos-r f-s-s bd-b h-3rem fg-white">
+            NO DATA CONNECTION TO SERVER
+          </div>
+      </div>
+    </div>
+  </div>
+  <iframe  id="product1" src="./hm/coat1/product1.htm" class="w-100p h-100p t-2rem l-0 pos-a op-0">
+  <section id="product1" class="product1"></section>
+  </iframe>
+
+  <iframe  id="product2" src="./hm/coat2/product2.htm" class="w-100p h-100p t-2rem l-0 pos-a op-0">
+  <section id="product2" class="product1"></section>
+  </iframe>
+
+  <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

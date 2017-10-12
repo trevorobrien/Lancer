@@ -1,0 +1,91 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <title>Eon ID</title>
+      <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="author" content="The Experiment">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimal-ui">
+      <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico">
+      <!--Scripts-->
+      <script src="js/jquery-2.1.1.min.js"></script>
+      <!--Styles-->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
+      <link rel="stylesheet" type="text/css" href="css/props-1.css"/>
+      <link rel="stylesheet" type="text/css" href="css/colors.css"/>
+      <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
+      <script src="//cdn.evrythng.com/toolkit/evrythng-js-sdk/evrythng-4.7.1.min.js"></script>
+     <script>
+     //var socket = new io.Socket('localhost:8000');
+     var socket = io.connect('http://localhost:8000')
+     socket.connect();
+     
+     socket.on('message', function(data){
+          console.log(data)
+          console.log('hello form web')
+        
+          document.getElementById('textdiv').innerHTML = "" + data;
+
+          // if (data == data) {
+          //   return;
+          // }
+
+
+          if (data == '4802260104110000') {
+            // window.location = "./prod1/prod1.htm";
+            // document.getElementById("yourIFrameid").style.display = "none";
+            document.getElementById("product1").classList.remove('op-0');
+            // document.getElementById('product1').className += ' op-100';
+            document.getElementById('product2').className += ' op-0';
+            document.getElementById('home').className += ' op-0';
+            // setInterval(function () {
+            //     document.getElementById('product1').className += ' op-0';
+            //     document.getElementById('product2').className += ' op-0';
+            // }, 3500);
+          }
+          else if (data == '480485251991723154129') {
+            // window.location = "./prod2/prod2.htm";
+            document.getElementById('product1').className += ' op-0';
+            document.getElementById('product2').classList.remove('op-0');
+            document.getElementById('home').className += ' op-0';
+
+          }
+
+     });
+
+
+     </script>
+  </head>
+  <body class=" bg-white ov-x-h">
+    <div id="textdiv" class="textdiv w-100p t-a-c h-4rem f-s-l pos-a bg-white black">
+      NO DATA CONNECTION TO SERVER
+    </div>
+      <div id="home" class="w-100p h-100p">
+        <div class="d-f j-c-center a-i-center pos-a w-100p h-100p">
+        <img class="w-13rem h-13rem pos-a" src="./images/logo.png" />
+        </div>  
+      </div>
+
+
+
+      <iframe  id="product1" src="./hm/coat1/product1.htm" class="w-100p h-100p t-2rem l-0 pos-a op-0">
+      <section id="product1" class="product1"></section>
+      </iframe>
+
+      <iframe  id="product2" src="./hm/coat2/product2.htm" class="w-100p h-100p t-2rem l-0 pos-a op-0">
+      <section id="product2" class="product1"></section>
+      </iframe>
+
+
+    <!--Application-->
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,40 @@
+{
+  "name": "thread-reader-web",
+  "version": "0.0.1",
+  "description": "integration with evrythng",
+  "dependencies": {
+    "evrythng": "^4.7.1",
+    "node-bluetooth": "^1.1.3",
+    "node-hid": "^0.5.4",
+    "python-shell": "^0.4.0",
+    "serialport": "^4.0.7",
+    "webpack": "^3.4.1",
+    "ws": "^3.0.0"
+  },
+  "devDependencies": {
+    "clean-css": "^3.4.19",
+    "http-server": "^0.9.0",
+    "jshint": "^2.9.3",
+    "mocha": "^3.0.2",
+    "node-sass": "^3.10.0",
+    "nodemon": "^1.10.2",
+    "uglify-js": "^2.7.3",
+    "watch": "^0.19.2"
+  },
+  "scripts": {
+    "info": "echo 'npm as a build tool'",
+    "lint": "echo '=> linting' && jshint test/*.js",
+    "test": "echo '=> testing' && mocha test/*.js",
+    "minify:js": "echo '=> minify:js' && uglifyjs js/test.js -o dist/public/js/main.min.js",
+    "minify:css": "echo '=> minify:css' && cleancss css/main.min.css -o dist/public/css/main.min.css",
+    "html": "cp index.html dist/public/",
+    "assets": "cp -R images/ dist/public/images/",
+    "build": "echo '=> building' && npm run minify:js -s && npm run minify:css -s && npm run html && npm run assets",
+    "build:sass": "node-sass sass/style.scss css/main.min.css",
+    "watch:sass": "npm run build:sass -- -w",
+    "pretest": "npm run lint -s",
+    "start": "http-server"
+  },
+  "author": "Experiment",
+  "license": "Open"
+}

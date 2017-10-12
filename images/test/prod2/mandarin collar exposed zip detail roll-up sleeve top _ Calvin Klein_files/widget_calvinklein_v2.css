@@ -1,0 +1,98 @@
+/* ---------------MIXINS!--------------- */
+#uclw .uclw_shop_calvinklein #uclw_header #uclw_logo {
+  top: 10px;
+  width: 150px;
+  height: 20px;
+  background: url("/images/widget_v2/overrides/logos/calvinklein.png") no-repeat 0 0; }
+
+#uclw .uclw_shop_calvinklein .uclw_dot_navigation li.uclw_active, #uclw .uclw_shop_calvinklein #uclw_dot_navigation li.uclw_active {
+  border-color: #000000;
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein #uclw_top_fitbar .uclw_bar_left {
+  border-color: #000000;
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_check_icon,
+#uclw .uclw_shop_calvinklein .uclw_icon_check {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_button_continue, #uclw .uclw_shop_calvinklein .uclw_button,
+#uclw .uclw_shop_calvinklein .uclw_submit_form_button,
+#uclw .uclw_shop_calvinklein #uclw_cart_button,
+#uclw .uclw_shop_calvinklein #uclw_close_button {
+  background: #000000;
+  border-color: #000000; }
+  #uclw .uclw_shop_calvinklein .uclw_button_continue:hover, #uclw .uclw_shop_calvinklein .uclw_button_continue:active, #uclw .uclw_shop_calvinklein .uclw_button_continue:focus, #uclw .uclw_shop_calvinklein .uclw_button:hover, #uclw .uclw_shop_calvinklein .uclw_button:active, #uclw .uclw_shop_calvinklein .uclw_button:focus,
+  #uclw .uclw_shop_calvinklein .uclw_submit_form_button:hover,
+  #uclw .uclw_shop_calvinklein .uclw_submit_form_button:active,
+  #uclw .uclw_shop_calvinklein .uclw_submit_form_button:focus,
+  #uclw .uclw_shop_calvinklein #uclw_cart_button:hover,
+  #uclw .uclw_shop_calvinklein #uclw_cart_button:active,
+  #uclw .uclw_shop_calvinklein #uclw_cart_button:focus,
+  #uclw .uclw_shop_calvinklein #uclw_close_button:hover,
+  #uclw .uclw_shop_calvinklein #uclw_close_button:active,
+  #uclw .uclw_shop_calvinklein #uclw_close_button:focus {
+    background: #1a1a1a;
+    border-color: #1a1a1a; }
+
+#uclw .uclw_shop_calvinklein#uclw_upper_results #uclw_fit_explanation .uclw_explanation_image {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein#uclw_upper_results #uclw_fit_explanation .uclw_lengths .uclw_overlay .uclw_slider {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein#uclw_upper_results #uclw_fit_explanation .uclw_lengths .uclw_overlay .uclw_slider span {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein#uclw_upper_results #uclw_fit_explanation .uclw_lengths .uclw_overlay .uclw_slider span:before {
+  border-right-color: #000000; }
+
+#uclw .uclw_shop_calvinklein#uclw_upper_results #uclw_fit_explanation .uclw_lengths span.uclw_label:before {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_garment .uclw_garment_check_icon_color {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein #uclw_animate_upper_results_kids #uclw_fit_prediction .uclw_fit_box .uclw_fit_scale .uclw_scale_pointer.uclw_fit_recommended {
+  background-color: #000000;
+  border-color: #000000; }
+  #uclw .uclw_shop_calvinklein #uclw_animate_upper_results_kids #uclw_fit_prediction .uclw_fit_box .uclw_fit_scale .uclw_scale_pointer.uclw_fit_recommended:before, #uclw .uclw_shop_calvinklein #uclw_animate_upper_results_kids #uclw_fit_prediction .uclw_fit_box .uclw_fit_scale .uclw_scale_pointer.uclw_fit_recommended:after {
+    border-top-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_results_sp #uclw_fit_prediction .uclw_fit_box .uclw_bar.uclw_bar_top .uclw_bar_left {
+  background-color: #000000;
+  border-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_results_sp #uclw_fit_prediction .uclw_fit_box .uclw_bar.uclw_bar_top:after {
+  border-left-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_lower_results .uclw_indicator .uclw_indicator_percentage {
+  color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_lower_results .uclw_indicator .uclw_indicator_label {
+  color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_lower_results .uclw_indicator .uclw_indicator_slice .uclw_indicator_pie, #uclw .uclw_shop_calvinklein .uclw_lower_results .uclw_indicator .uclw_indicator_slice_bg .uclw_indicator_pie {
+  border-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_lower_results .uclw_indicator .uclw_indicator_slice_bg .uclw_indicator_pie_bg_border {
+  border-color: #000000; }
+
+#uclw .uclw_shop_calvinklein .uclw_lower_results .uclw_fit_text:not(.uclw_fit_outofscale):before {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein.uclw_not_mobile #uclw_form .uclw_dropdown.uclw_has_focus ul li:hover, #uclw .uclw_shop_calvinklein.uclw_not_mobile #uclw_form .uclw_dropdown.uclw_has_focus ul li.uclw_selected, #uclw .uclw_shop_calvinklein.uclw_not_mobile .uclw_form_wrapper .uclw_dropdown.uclw_has_focus ul li:hover, #uclw .uclw_shop_calvinklein.uclw_not_mobile .uclw_form_wrapper .uclw_dropdown.uclw_has_focus ul li.uclw_selected {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein #uclw_preloader .uclw_spinner > div {
+  background-color: #000000; }
+
+#uclw .uclw_shop_calvinklein button {
+  box-shadow: none; }
+
+#uclw .uclw_shop_calvinklein *:nth-child(n) {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif !important; }
+
+#uclw .uclw_shop_calvinklein .uclw_results_screen .uclw_fit_info .uclw_info b * {
+  display: inline-block; }

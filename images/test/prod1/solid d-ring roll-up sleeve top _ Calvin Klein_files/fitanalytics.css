@@ -1,0 +1,27 @@
+.fitanalytics__button {
+  display: inline-block;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.fitanalytics__button > .fitanalytics__button-text {
+  display: inline-block;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.fitanalytics__button-edit {
+  display: inline-block;
+  margin-left: 7.5px;
+  text-decoration: underline;
+}
+
+.fitanalytics__button__ABTest {
+  text-transform: uppercase;
+  color: #000;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 7px;
+  line-height: normal;
+}

@@ -1,0 +1,2548 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   BASE STYLES: OPINIONATED DEFAULTS
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    overflow-y: scroll;
+}
+
+html, body
+{
+	height: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea
+{
+	-webkit-appearance: none;
+    resize: vertical;
+}
+
+/*
+ * Keep from being bigger than the parent element.
+ */
+ 
+img
+{
+	max-width: 100%;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=tel]
+{
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	width: 100%;
+	height: 25px;
+	padding: 5px 4px 3px;
+	box-shadow: none;
+	-webkit-appearance: none;
+	border: 1px solid;
+	outline: none;
+}
+
+a
+{
+	cursor: default;
+}
+
+a[href]:not([disabled]),
+a[onclick]:not([disabled])
+{
+	cursor: pointer;
+	outline: none;
+}
+
+li
+{
+	list-style: outside none none;
+}
+
+*[tabindex="0"]:focus
+{
+	outline: none;
+}
+
+/* ==========================================================================
+   PAGE
+   ========================================================================== */
+
+.centeredContentWrapper,
+.centeredContent
+{
+	position: relative;
+}
+
+.centeredContentWrapper
+{
+	float: right;
+	left: -50%;
+}
+
+.centeredContent
+{
+	float: left;
+	left: 50%;
+}
+
+/* ==========================================================================
+   DESKTOP / MOBILE / TOUCH CLASSES
+   ========================================================================== */
+
+.desktop .mobile, .mobile .desktop, .desktop:not(.tablet) .touch, .mobile .nonTouch, .tablet .nonTouch { display: none !important; }
+
+.mobile select,
+.mobile input,
+.mobile textarea
+{
+	font-size: 16px !important;
+}
+
+/* ==========================================================================
+   SHARED OVERLAY
+   ========================================================================== */
+
+.pvhOverlay
+{
+	display: table;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.pvhOverlayBG
+{
+	background-color: #000;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+}
+
+.pvhOverlayContainer
+{
+	display: table-cell;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.pvhOverlayContentWrapper
+{
+	background-color: #fff;
+	display: inline-block;
+	margin: 15px 50px;
+	max-width: 860px;
+	min-height: 60px;
+	min-width: 120px;
+	position: relative;
+	text-align: left;
+	visibility: hidden;
+	outline: none;
+}
+
+.mobile .pvhOverlayContentWrapper {
+    display: block;
+    margin: 15px 14px;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: inherit;
+}
+
+.pvhOverlayContent
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0 !important;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+.pvhOverlayTitle
+{
+	display: none;
+}
+
+.pvhOverlayCloseX
+{
+	cursor: pointer;
+	height: 60px;
+	right: 0;
+	position: absolute;
+	top: 0;
+	width: 60px;
+	z-index: 2;
+}
+
+.pvhOverlayContentWrapper.shadow
+{
+	box-shadow: 0 3px 14px 0 rgba(94, 106, 113, 0.4);
+}
+
+/* ==========================================================================
+   CLOUDZOOM
+   ========================================================================== */
+
+/* Fix to hide unlicensed message that appears outside of tommy.com */
+.cloudzoom-blank > div[style*="z-index"]
+{
+	display: none !important;
+}
+
+.zoomInCursor:not(.no-image),
+.cloudzoom-zoom-inside,
+.fullscreenLink
+{
+	cursor: pointer !important;
+	cursor: -moz-zoom-in !important;
+	cursor: -webkit-zoom-in !important;
+	cursor: zoom-in !important;
+}
+
+.cloudzoom-zoom-inside
+{
+	outline: none;
+}
+
+.cloudzoom-zoom-inside,
+.cloudzoom-blank,
+img[class^=cloudzoom-fade]
+{
+	top: 0 !important;
+	left: 0 !important;
+}
+
+html:not(.ready) #zoomWrapper
+{
+	visibility: hidden;
+}
+
+#zoomWrapper
+{
+	overflow: hidden;
+	position: relative !important;
+}
+
+#zoomWrapper,
+#zoomWrapper #zoom
+{
+	width: 100%;
+}
+
+#zoomWrapper img
+{
+	-webkit-user-select: none;
+}
+
+/* ==========================================================================
+   FULLSCREEN
+   ========================================================================== */
+
+#fullscreenWrapper
+{
+	cursor: pointer;
+	cursor: -moz-zoom-out;
+	cursor: -webkit-zoom-out;
+	cursor: zoom-out;
+	display: none;
+	height: 100%;
+	left: 0;
+	min-width: 800px;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	visibility: hidden;
+}
+
+#fullscreenWrapper .pvhOverlayBG
+{
+	visibility: inherit;
+	background-color: #000;
+	
+	zoom:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	opacity: .8;
+}
+
+.dj_ie8 .cloudzoom-zoom-inside,
+.dj_ie8 #fullscreenWrapper
+{
+	cursor: pointer;
+}
+
+#fullscreenWrapper .wrapper
+{
+	height: 80%;
+	left: 5%;
+	overflow: hidden;
+	position: absolute;
+	top: 10%;
+	width: 90%;
+	background-color: #FFF;
+}
+
+#fullscreenWrapper .fullscreenImg
+{
+	height: auto;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+}
+
+#fullscreenWrapper .error
+{
+	position: relative;
+	text-align: center;
+	top: 43%;
+	text-transform: uppercase;
+	color: inherit !important;
+	display: block;
+}
+
+#fullscreenWrapper .error span
+{
+	font-size: .95rem;
+}
+
+#fullscreenWrapper #product_visual_thumbnails
+{
+	margin: 0;
+	visibility: inherit;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+	z-index: 1;
+}
+
+#fullscreenWrapper .prodThumbnails a
+{
+	display: block;
+}
+
+#fullscreenWrapper .prodThumbnails a img:not([data-is-loaded="true"])
+{
+	visibility: hidden;
+}
+
+/* ==========================================================================
+   FLOATING NAV
+   ========================================================================== */
+
+.floatingNav
+{
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	text-transform: uppercase;
+}
+
+.floatingNav ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.floatingNav li a
+{
+	padding: 6px 0 6px 10px;
+	display: inline-block;
+}
+
+/* ==========================================================================
+   ERRORS
+   ========================================================================== */
+
+.productPageAddButton .fieldErrorMessage
+{
+	margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   MOBILE HEADER NAV
+   ========================================================================== */
+
+.mobile #headerLinks.shadow
+{
+    -webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.mobile #headerLinks.shadow:before
+{
+    display: block;
+    content: '';
+    height: 3000px;
+    background-image: linear-gradient(to left, rgba(0,0,0,.16), transparent);
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+
+.mobile #headerNavWrapper
+{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: calc(100% - 50px);
+    height: 0;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+.mobile #headerNavWrapper.visible
+{
+	overflow-y: auto;
+}
+
+.mobile header #headerNav,
+.mobile header #headerNavInner,
+.mobile header #headerNavList,
+.mobile header .headerNavDropDown,
+.mobile header nav
+{
+	height: inherit;
+}
+
+.mobile header #headerNavList
+{
+	position: relative;
+}
+
+.mobile header .headerNavDropDown
+{
+	position: absolute;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: inherit;
+	left: 100%;
+	top: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+ 	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+.mobile header .headerNavBack
+{
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	top: 0;
+}
+
+/* ==========================================================================
+   MOBILE FILTERS
+   ========================================================================== */
+
+.filtersTop
+{
+	background-color: #FFF;
+	position: -webkit-sticky;
+	top: 0;
+	padding-top: 16px;
+	z-index: 2;
+}
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+.tabsContainer
+{
+	border: 1px solid;
+	float: left;
+	width: 99.5%;
+}
+
+.tab
+{
+	background-color: #F1F1F1;
+	color: inherit;
+	border-color: inherit;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	padding: 8px 0;
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+	height: 32px;
+	float: left;
+	overflow: hidden;
+	text-transform: uppercase;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.tabsContainer .tab.current 
+{
+	background-color: #FFF;
+}
+
+.tabsContainer .tab:first-child
+{
+	border-left: none;
+}
+
+.tabsContainer .pane
+{
+	display: none;
+	min-height: 18px;
+}
+
+.tabsContainer .tab.current
+{
+	border-bottom: none;
+	cursor: default;
+}
+
+.tabsContainer .pane.current
+{
+	display: block;
+}
+
+/* ==========================================================================
+   SIZE DROP DOWN
+   ========================================================================== */
+
+.sizeSelector .instruction
+{
+	display: none;
+}
+
+/* ==========================================================================
+   QUICKVIEW
+   ========================================================================== */
+
+.mobile .main_quickinfo_button
+{
+	display: none;
+}
+
+/* ==========================================================================
+   SHORT DESCRIPTION
+   ========================================================================== */
+
+.description .itemDescription p
+{
+	margin: 0;
+}
+
+/* ==========================================================================
+   LONG DESCRIPTION
+   ========================================================================== */
+
+.categoryLongDescription p
+{
+	margin: 0;
+}
+
+/* ==========================================================================
+   STATIC CONTENT
+   ========================================================================== */
+
+.contentPage .categoryControls
+{
+	display: none;
+}
+
+/* ==========================================================================
+   GRID ALTS
+   ========================================================================== */
+
+.productCell img.alt1,
+.productCell img.alt2,
+.productCell img.altRemoved
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* ==========================================================================
+   ADA
+   ========================================================================== */
+
+.skip-navigation {
+	background-color:#fff;
+	border:2px solid #000;
+	clip:rect(0px, 0px, 0px, 0px);
+	overflow:hidden;
+	padding:4px;
+	position:absolute;
+    text-decoration: none;
+	z-index:1;
+}
+
+.skip-navigation:focus {
+	clip:auto;
+	left:15px;
+	top:15px;
+	z-index:1;
+}
+
+
+/* ==========================================================================
+   TAB OUTLINE
+   ========================================================================== */
+
+.desktop:not(.tablet) *[tabindex="0"]:focus,
+.desktop:not(.tablet) a[href]:focus
+{
+	outline-style: dotted;
+	outline-width: 1px;
+	outline-color: #000;
+}
+
+.desktop .dk_container {
+  overflow: hidden;
+}
+
+.desktop .dk_container.dk_open {
+  overflow: visible;
+}
+
+/* ==========================================================================
+   FORGOT PASSWORD
+   ========================================================================== */
+
+.desktop #box.passwordReset
+{
+	width: 740px;
+	margin: 15px auto 0 !important;
+	float: none;
+	min-width: 0;
+}
+
+.passwordreset div#MessageArea {
+    display: none;
+}
+
+.passwordResetEmailInputWrapper
+{
+	position: relative;
+}
+
+.passwordResetEmailInputWrapper input
+{
+	display: block;
+    margin-bottom: 15px;
+}
+
+.desktop .passwordResetEmailInputWrapper input{
+    width: 300px;
+}
+
+#box .forgot_password_container ul {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.mobile .passwordResetEmailInputWrapper {
+    float: none;
+}
+
+/* ==========================================================================
+   SHOPPING BAG
+   ========================================================================== */
+
+.desktop .shop_cart .content_wrapper {
+	width: 67%;
+	float: left;
+}
+
+.desktop div#shoppingBagColumn2 {
+    width: 31%;
+    float: right;
+}
+
+.shoppingBagPage .orderSummaryHeader {
+    display: none;
+}
+
+div#shoppingBagColumn2 {
+	text-transform: uppercase;
+}
+
+.checkoutContainer {
+	border-radius: 2px;
+	margin-bottom: 10px;
+}
+
+.promotion_input{
+	padding: 11px 0 0 15px;
+	float: left;
+    width: calc(100% - 85px);
+    display: block;
+    box-sizing: border-box;
+}
+
+.promotion_button {
+    float: right;
+    margin: 11px 15px 0 0;
+}
+
+.promotion_button a{
+    font-size: 1em !important;
+    padding: 8px 10px;
+    line-height: normal;
+    width: auto;
+}
+
+input#promoCode {
+    display: block;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+input#promoCode{
+    width: calc(100% - 70px);
+    float: left;
+}
+
+.checkoutContent {
+	padding: 11px 15px 15px;
+}
+
+.secure {
+	position: absolute;
+	bottom: 100%;
+	right: 0;
+	font-size: 0.7692rem;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #CACACA;
+	font-weight: bold;
+}
+
+.secure .lock {
+	margin-right: 1px;
+	margin-top: -4px;
+	width: 8px;
+}
+
+.shoppingBagPage .checkoutButtonContainer {
+    text-align: center;
+}
+
+.desktop.shoppingBagPage .checkoutButtonContainer .checkoutBttn {
+    font-size: 1.154rem !important;
+}
+
+.shoppingBagPage .checkoutButtonContainer .lock {
+    width: 14px;
+    margin-right: 5px;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.shoppingBagPage .cartAdditionalPayments + .shoppingBagSRMessage {
+    margin-top: 14px;
+}
+
+.shoppingBagPage .gradient-title {
+  text-align: center;
+}
+
+#giftOptionsWrpr input[type="text"], #giftOptionsWrpr textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 9px;
+    padding: 5px 4px 4px;
+}
+
+#giftOptionsWrpr textarea{
+    width: calc(100% - 9px);
+}
+
+/* ==========================================================================
+   SHEER ID / DISCOUNTS
+   ========================================================================== */
+
+.sheerIdOffers,
+.sheerIdOffers .disclaimer {
+    margin-top: 5px;
+}
+
+.sheerIdOffers .labelPromo {
+    max-width: calc(100% - 70px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.desktop .sheerIdOffers .labelPromo {
+	max-width: 74%;
+    max-width: calc(100% - 63px);
+}
+
+.sheerIdOffers .discountOption {
+	float: left;
+	margin-left: 2%;
+	width: 32%;
+	font-size: 0.9231rem;
+}
+
+.sheerIdOffers .discountOption:first-child {
+	margin-left: 0;
+}
+
+.sheerIdOffers .discountOption:first-child + .discountOption {
+	text-align: center;
+}
+
+.sheerIdOffers .discountOption:first-child + .discountOption + .discountOption {
+	text-align: right;
+}
+
+iframe#sheerIdWrapper {
+	 border: none;
+}
+
+.desktop iframe#sheerIdWrapper {
+	 width: 680px;
+	 height: 620px;
+}
+
+.desktop iframe#sheerIdWrapper.military {
+	 height: 750px;
+}
+
+.mobile iframe#sheerIdWrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#SheerIdPromotionCodeForm .checkoutContent {
+	padding-bottom: 11px;
+}
+
+
+/* ==========================================================================
+   SHEER ID / DISCOUNTS - WITH APPLY
+   ========================================================================== */
+
+#sheerIdOffersApply {
+    position: relative;
+}
+
+#sheerIdOffersApply .primary {
+    margin: 10px 0 4px 5px;
+}
+
+#sheerIdOffersApply .disclaimer {
+	bottom: 2px;
+    position: absolute;
+}
+
+
+/* ==========================================================================
+   ORDER SUMMARY
+   ========================================================================== */
+
+.orderSummary .checkoutContent {
+	padding-bottom: 11px;
+}
+
+
+/* ==========================================================================
+   CHECKOUT - ORDER TOTALS
+   ========================================================================== */
+
+#order_total .order_total,
+#order_total .order_total_figures {
+	padding-top: 8px;
+	padding-bottom: 0 !important;
+	font-size: 1.15em;
+	font-weight: bold;
+}
+
+
+#order_total .total_details,
+#order_total .total_figures {
+	padding-bottom: 8px;
+	float: left;
+}
+
+#order_total .total_details {
+	max-width: 70%;
+}
+
+#order_total .total_figures {
+    text-align: right;
+    float: right;
+}
+
+#order_total td.total_details,
+#order_total td.total_figures {
+	float: none;
+}
+
+#order_total .total_details,
+#order_total .total_figures
+{
+	padding-bottom: 8px;
+	float: left;
+}
+
+#order_total .total_details
+{
+	max-width: 70%;
+}
+
+#order_total .total_figures
+{
+    text-align: right;
+    float: right;
+}
+
+#order_total td.total_details,
+#order_total td.total_figures
+{
+	float: none;
+}
+
+/* ==========================================================================
+   PRODUCT ROWS
+   ========================================================================== */
+
+.productRow {
+	padding-top: 15px;
+	overflow: hidden;
+}
+
+.productRow:first-child {
+	border-top: none;
+}
+
+.productRow .productLeft {
+	position: relative;
+}
+
+.productRight .priceAndQuantity > div,
+.orderConfirmationPage .productRight .productPricing > div  {
+	float: left;
+	width: 33.333%;
+	min-height: 1px;
+}
+
+.productRight .discount
+{
+	margin-top: 9px;
+}
+
+.productRow .discountTitle {
+	max-width: 70%;
+}
+
+.productRow .discountTitle p
+{
+	margin: 0;
+}
+
+.productRow .cost,
+.productRow .price {
+	line-height: normal;
+}
+
+.productRight select,
+.productRow .cost,
+.productRow .price,
+.total_figures {
+	font-size: 1.1em;
+}
+
+.productHeader,
+#order_details .header {
+	padding: 6px 0;
+	color: #888;
+	font-size: .9em;
+}
+
+.productHeader > div,
+#order_details .header > div {
+	float: left;
+	width: 13.666%;
+	min-height: 1px;
+}
+
+.desktop .orderProducts {
+	margin-bottom: 25px;
+}
+
+.desktop .orderProducts .productLeft,
+.desktop.myaccount-orderstatus .productRow .productLeft,
+.desktop #order_details .productRow > .firstColumnWrapper {
+	float: left;
+}
+
+.desktop .productHeader > .productHeaderItem,
+.desktop .orderProducts .productLeft,
+.desktop #order_details .header #shoppingCart_tableCell_productName,
+.desktop.myaccount-orderstatus .productRow .productLeft,
+.desktop #order_details .productRow > .firstColumnWrapper {
+	width: 59%;
+}
+
+.desktop .orderProducts .productRight,
+.desktop.orderConfirmationPage #total_breakdown,
+.desktop.orderConfirmationPage .productRow .productPricing,
+.desktop.myaccount-orderstatus .productRow .productPricing,
+.desktop #order_details .productRow > .costDiscountWrapper,
+.desktop.orderConfirmationPage .productRow .discountsWrapper,
+.desktop.myaccount-orderstatus .productRow .discountsWrapper
+{
+    float: right;
+    width: 41%;
+}
+
+.desktop.orderConfirmationPage .productRow .productPricing,
+.desktop.myaccount-orderstatus .productRow .productPricing
+{
+    clear: none;
+}
+
+.productHeader .productHeaderTotal,
+.productRight .total,
+#order_details .header #shoppingCart_tableCell_total {
+	text-align: right;
+}
+
+.productHeader .productHeaderQuantity,
+.productRight .quantity {
+	text-align: center;
+}
+
+.productRight select {
+	margin: -5px auto 0 !important;
+    min-width: 40px;
+    width: auto;
+}
+
+.quantitySelectCart {
+	height: 26px !important;
+}
+
+.productRight select option {
+	text-align: left;
+}
+
+.productRow .product_title,
+.productRow .creditStatus {
+	padding-bottom: 6px;
+	margin-top: 0;
+}
+
+.productRow .returnShippingCost {
+	padding-top: 15px;
+}
+
+.mobile .productRow .creditStatus,
+.mobile .productRow .returnShippingCost {
+	clear: both;
+}
+
+.orderProducts .linkGroup {
+	padding-bottom: 7px;
+}
+
+.productRow .productRight  {
+    text-transform: uppercase;
+}
+
+.productRow .productRight > div > .link {
+	display: inline-block;
+	padding-bottom: 3px;
+}
+
+.productRow .image {
+    width: 24.8%;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    max-width: 101px;
+}
+
+.productRow .info {
+    text-transform: uppercase;
+}
+
+.desktop .orderProducts .info {
+    margin: 0 5% 15px 30%;
+}
+
+.productRow .info > div:first-child {
+    min-height: 121px;
+}
+
+.productRow .firstColumnWrapper .info > div:first-child {
+	min-height: 0;
+}
+
+.inventoryMessage .preOrderExpDate {
+	margin-bottom: 7px;
+}
+
+.inventoryMessage {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.inventoryMessage .preOrderExpDate {
+	font-size: 1rem;
+	font-weight: normal;
+	margin-top: -3px;
+}
+
+/* ==========================================================================
+   VIDEO
+   ========================================================================== */
+
+.product_main_video
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	
+	zoom:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+}
+
+/* ==========================================================================
+   CHECKOUT
+   ========================================================================== */
+
+.shoppingBagPage #content_wrapper, 
+.desktop.orderShippingBillingPage #mainContents > #content_wrapper, 
+.desktop.orderConfirmationPage #content_wrapper, 
+.desktop.orderShippingBillingPage .page-content-wrapper {
+    float: left;
+    width: 67%;
+}
+
+.desktop #miniShoppingBag {
+    float: right;
+}
+
+.desktop #shoppingBagColumn2, .desktop #miniShoppingBag {
+    width: 31%;
+    position: relative;
+}
+
+.checkoutBG {
+	padding: 20px 15px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.myAccountPage #add2WishlistRight,
+.orderShippingBillingPage #add2WishlistRight
+{
+	display: none;
+}
+
+.checkout_addresses .userLogin
+{
+	overflow: hidden;
+}
+
+.orderShippingBillingPage .checkoutAccordionSection.open
+{
+	height: auto;
+	visibility: inherit;
+}
+
+.mobile .checkoutAccordionTitle
+{
+	top: 21px;
+}
+
+.orderShippingBillingPage .checkoutAccordionSection.open .checkoutAccordionTitle
+{
+	visibility: hidden;
+}
+
+.orderShippingBillingPage .checkoutAccordionSection.open h1.large
+{
+	visibility: inherit;
+}
+
+.orderShippingBillingPage .titleWrapper
+{
+	position: relative;
+	padding: 0 15px;
+}
+
+.orderShippingBillingPage #shippingWrapper ~ .shippingMethod > .titleWrapper
+{
+	padding: 0;
+}
+
+.orderShippingBillingPage .addressContentContainer:before
+{
+	content: '';
+	display: block;
+	position: relative;
+	top: -19px;
+}
+
+.orderShippingBillingPage #shipBox .shippingMethod > .titleWrapper,
+.orderShippingBillingPage .addresses .titleWrapper:first-child
+{
+	border-top: none;
+}
+
+.orderShippingBillingPage .back-next-link-container
+{
+	padding-top: 20px; 
+}
+
+.orderShippingBillingPage #shipBox .shippingMethod
+{
+	position: relative;
+}
+
+.orderShippingBillingPage .FAQs.titleWrapper
+{
+	border-top: none;
+	text-transform: uppercase;
+}
+
+.orderShippingBillingPage #billBoxInner.checkoutBG
+{
+	margin-bottom: 0;
+}
+
+.orderShippingBillingPage #billBoxInner.checkoutBG
+{
+	padding-top: 0;
+}
+
+.orderShippingBillingPage #billBoxInner.checkoutBG > .billingContentContainer
+{
+	padding-top: 20px;
+}
+
+.orderShippingBillingPage .addressContentContainer,
+.orderShippingBillingPage .billingContentContainer
+{
+	display: none;
+}
+
+.orderShippingBillingPage .addressContentContainer .checkoutHeader + .poBoxWarning
+{
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.orderShippingBillingPage .shipmentInstructions
+{
+	margin-bottom: 18px;
+}
+
+.orderConfirmationPage .preOrderNotification .genericESpot > div:first-child,
+.orderShippingBillingPage .checkoutAccordionSection.shippingMethod .preOrderNotification .genericESpot > div:first-child,
+.orderShippingBillingPage .shipmentInstructions > div
+{
+	margin-bottom: 10px;
+	line-height: normal;
+}
+
+.orderConfirmationPage .preOrderNotification .genericESpot > div:first-child,
+.myAccountPage .preOrderNotification .genericESpot > div:first-child,
+.orderConfirmationPage #ipItemSeparateShippngHelp,
+.myAccountPage #ipItemSeparateShippngHelp
+{
+	margin-top: 10px;
+	line-height: normal;
+}
+
+.FAQs .checkoutAccordionTitle
+{
+	position: static;
+	margin-top: 21px;
+	white-space: normal;
+}
+
+.FAQs ul
+{
+	padding-left: 0;
+	margin: 0;
+	color: #888;
+}
+
+.desktop #content_wrapper,
+.desktop .customerAreaContent
+{
+  	width: 71%;
+  	float: left;
+}
+
+.desktop.customerAreaContent
+{
+	margin-left: 30px;
+}
+
+.customerAreaContent #WC_OrderShipmentDetails_div_29 .button_footer_line .left {
+    padding-right: 20px;
+}
+.customerAreaContent #WC_OrderShipmentDetails_div_29 .button_side_message {
+    color: #888;
+    font-size: 0.9231rem;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.secure
+{
+	position: absolute;
+	bottom: 100%;
+	right: 0;
+	font-size: 0.7692rem;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #CACACA;
+	font-weight: bold;
+}
+
+.secure .lock
+{
+	margin-right: 1px;
+	margin-top: -4px;
+	width: 8px;
+}
+
+ /* ==========================================================================
+   CHECKOUT - PAYMENT
+   ========================================================================== */
+
+#payWithCCDiv label img,
+.card-logo-container img
+{
+	width: 50px;
+}
+
+.payPalPaymentDiv label > img
+{
+	width: 80px;
+}
+
+.giftCardInfo.expandable
+{
+	overflow: hidden;
+	height: 0;
+	visibility: hidden;
+}
+
+.giftCardInfo.expandable.open
+{
+	height: auto;
+	visibility: inherit;
+}
+
+.giftCardInfo.expandable .gift-card-container
+{
+	margin: 10px 0 20px;
+}
+
+.expandableSectionHeader
+{
+    position: relative;
+    border-top: 1px solid #A2A9B3;
+    padding: 20px 0;
+    cursor: pointer;
+    font-size: 1.077rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.expandableSectionHeader.open:after
+{
+	right: 2px;
+	top: 4px;
+	content: '\2013';
+	position: absolute;
+	font-size: 2.462rem;
+}
+
+.expandableSectionHeader:after
+{
+    position: absolute;
+    right: 1px;
+    top: 7px;
+    content: '+';
+    font-size: 2.462rem;
+    font-weight: normal;
+}
+
+.giftCardInfo .primary
+{
+	line-height: 14px;
+    margin-top: 18px;
+	float: right;
+}
+
+#giftCardPinLabel
+{
+	width: 73%;
+	width: calc(100% - 70px);
+	float: left;
+}
+
+.giftCardNum
+{
+	font-size: 0.8462rem;
+}
+
+.gift-card-applied
+{
+	margin-bottom: 20px;
+}
+
+.gift-card-applied > .column
+{
+	float: left;
+}
+
+.gift-card-applied > .column:first-child
+{
+	margin-right: 7px;
+}
+
+.gift-card-applied > .column .link
+{
+	margin-left: 5px;
+}
+
+#billBox input[type=radio][disabled] + label,
+#giftCardPin[disabled] + a
+{
+	zoom: 1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    opacity: 0.2;
+}
+
+#giftCardPin[disabled] + a
+{
+	cursor: default;
+	cursor: not-allowed;
+}
+
+/* ==========================================================================
+   CHECKOUT - SIGN-IN
+   ========================================================================== */
+   
+.orderShippingBillingPage .checkout_addresses .placeOrder
+{
+	display: none;
+}
+
+.orderShippingBillingPage .userLogin .checkoutAccordionTitle
+{
+	top: 15px;
+	margin-bottom: 38px;
+	margin-top: 10px;
+}
+
+.orderShippingBillingPage .userLogin .titleWrapper
+{
+	border-top: none;
+}
+
+.orderShippingBillingPage #Logon > input
+{
+	margin-bottom: 10px;
+}
+
+.orderShippingBillingPage .userLogin .column #guestUserForm ul
+{
+	margin-bottom: 10px;
+}
+
+.orderShippingBillingPage .back-next-link-container.placeOrder
+{
+	clear: both;
+    display: inline-block;
+    width: 100%;
+}
+
+.desktop.orderShippingBillingPage .back-next-link-container.placeOrder
+{
+	text-align: right;
+}
+
+.orderShippingBillingPage .back-next-link-container #ReviewOrderButtonWrapper {
+    display: inline-block;
+}
+
+.orderShippingBillingPage .checkoutAccordionSection.addresses .addressContentContainer > h2
+{
+	margin: 25px 0 4px;
+}
+
+.orderShippingBillingPage .checkoutAccordionSection.addresses .checkbox
+{
+	margin-top: 5px;
+	height: auto;
+}
+
+.orderShippingBillingPage .addresses .same_as
+{
+	margin-bottom: 10px;
+}
+
+.orderShippingBillingPage .newsletterCheckbox label
+{
+	display: block;
+    color: #00154D;
+    text-transform: uppercase;
+    margin-left: 20px;
+    position: relative;
+}
+
+.orderShippingBillingPage .newsletterCheckbox label:first-child
+{
+    margin-top: 15px;
+}
+
+.desktop.orderShippingBillingPage .newsletterCheckbox label
+{
+    font-size: 0.9231rem;
+}
+
+.mobile.orderShippingBillingPage .newsletterCheckbox label
+{
+   	margin-top: 5px;
+}	
+
+.orderShippingBillingPage .newsletterCheckbox label input
+{
+	margin-bottom: 0px !important;
+	position: absolute;
+	left: -20px;
+	top: -2px;
+}
+
+.orderShippingBillingPage .newsletterCheckbox .legal
+{
+	color: #888;
+	font-size: 0.8462rem;
+	margin-left: 20px;
+}
+
+.orderShippingBillingPage .newsletterCheckbox .legal a
+{
+	font-size: inherit;
+	text-transform: inherit;
+}
+
+/* ==========================================================================
+   CHECKOUT - LAYOUT
+   ========================================================================== */
+
+.orderShippingBillingPage #paymentDateSpan select
+{
+	width: 48%;
+	margin-right: 4%;
+	width: calc(50% - 7.5px);
+	margin-right: calc(15px);
+	float: left;
+}
+
+.orderShippingBillingPage #paymentDateSpan select + select
+{
+	margin-right: 0;
+}
+
+.orderShippingBillingPage #paymentDateSpan label {
+    display: block;
+}
+
+#payWithCCDiv,
+.pay-with-paypal-container
+{
+	margin-bottom: 20px;
+}
+
+.pay-with-paypal-container
+{
+	margin-top: 5px;
+}
+
+.orderShippingBillingPage #cardType,
+.orderShippingBillingPage .card_number,
+.orderShippingBillingPage #paymentDateSpan,
+.orderShippingBillingPage #cc_cvc_span
+{
+	margin-bottom: 10px;
+}
+
+.orderShippingBillingPage #paypalMessageBox
+{
+	margin-bottom: 20px;
+}
+
+.orderConfirmationPage .addressColumn + .addressColumn,
+.orderDetails .addressColumn + .addressColumn
+{
+	margin-top: 15px;
+}
+
+@media screen and (min-width: 600px)
+{
+	.addressColumns .addressColumn,
+	.orderShippingBillingPage .userLogin .column,
+	.orderShippingBillingPage #cardType,
+	.orderShippingBillingPage .card_number,
+	.orderShippingBillingPage #paymentDateSpan,
+	.orderShippingBillingPage #cc_cvc_span,
+	.orderShippingBillingPage .gift-card-input > .column,
+	.orderShippingBillingPage #preferred-program-not-applied .column,
+	.myAccountPage #AddressForm .column,
+	.myaccount-personalinfo .addressColumn,
+	.myaccount-wishlist form#SendMsgForm .column,
+	.myaccount-checkoutpreference div#shipAddr .column,
+	.myaccount-checkoutpreference div#billAddr .column,
+	.myaccount-personalinfo .signInInfoContent .column1,
+	.myaccount-personalinfo .signInInfoContent .column2,
+	.gift-card-applied
+	{
+		float: left;
+	}
+	
+	.addressColumns .addressColumn + .addressColumn:not(:nth-child(odd)),
+	.orderShippingBillingPage .card_number,
+	.orderShippingBillingPage #paymentDateSpan,
+	.orderShippingBillingPage .gift_card_pin,
+	.orderShippingBillingPage .gift-card-input > .column + .column,
+	.orderShippingBillingPage #preferred-program-not-applied .column + .column,
+	#appliedGiftCards > .gift-card-applied:nth-child(even),
+	.myAccountPage #AddressForm .column + .column:not(.clear),
+	.myaccount-personalinfo .aboutMeContent .addressColumn + .addressColumn:not(.clear),
+	.myaccount-personalinfo .signInInfoContent .addressColumn:nth-child(2n),
+	.myaccount-wishlist form#SendMsgForm .column:nth-child(2n),
+	.myaccount-checkoutpreference div#shipAddr .column + .column:not(.clear),
+	.myaccount-checkoutpreference div#billAddr .column + .column:not(.clear),
+	.myaccount-personalinfo .signInInfoContent .column2
+	{
+		margin-right: 0 !important;
+	}
+	
+	.orderShippingBillingPage .userLogin .column:first-child:after
+	{
+		content: '';
+	    height: 99%;
+	    min-height: 33px;
+	    position: absolute;
+	    right: 1px;
+	    top: 2px;
+	}
+	
+	.ready.orderShippingBillingPage .shippingMethod .shippingInfo.addressColumn:before
+	{
+		content: '';
+		border-right: 1px solid #A2A9B3;
+	    height: 80%;
+	    height: calc(100% - 22px);
+	    position: absolute;
+	    left: -15px;
+	    top: 2px;
+	}
+	
+	.orderShippingBillingPage .shippingMethod .shippingInfo {
+		position: relative;
+	}
+	
+	.orderShippingBillingPage .userLogin > .column:first-child
+	{
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	
+	#payWithCCDiv
+	{
+		margin-right: 70px;
+	}
+	
+	.mobile.orderShippingBillingPage .newsletterCheckbox label
+	{
+    	margin-top: 18px;
+	}
+}
+
+/* ==========================================================================
+   CHECKOUT - MINI SHOPPING BAG
+   ========================================================================== */
+
+.desktop #miniShoppingBag 
+{
+  	float: right;
+}
+
+.desktop #miniShoppingBag #content_wrapper
+{
+	overflow-y: auto;
+	max-height: 544px;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+#miniShoppingBag .productRow,
+.mobile .productRow
+{
+	padding-bottom: 20px;
+}
+
+#miniShoppingBag .cartProducts .checkoutContent {
+    padding: 0;
+}
+
+#miniShoppingBag .item_row .img
+{
+    margin-right: 3%;
+    width: 22%;
+    position: relative;
+}
+
+#miniShoppingBag .item_row .img img
+{
+    width: 100%;
+    height: auto;
+}
+
+#miniShoppingBag .price.offerPriceRed,
+.mini_cart_price_discounted
+{
+    color: #F00001;
+}
+
+.mobile .orderDetails .productLeft .image
+{
+	max-width: 75px;
+}
+
+#miniShoppingBag .productHeader,
+.mobile .orderProducts .productHeader
+{
+	margin-bottom: 13px;
+}
+
+#miniShoppingBag .productHeader > div,
+.mobile .productHeader > div
+{
+	width: 33.333%;
+}
+
+#miniShoppingBag .yourOrder .checkoutContent
+{
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+#miniShoppingBag .productRow.giftBoxRow .info > div:first-child
+{
+	min-height: 113px;
+}
+
+#miniShoppingBag .productPricing > div {
+    float: left;
+    width: 33.333%;
+    min-height: 1px;
+}
+
+#miniShoppingBag .productRow .info{
+	margin-bottom: 7px;
+}
+
+#miniShoppingBag .info .manageCartButtons a.link:last-child {
+    padding-right: 0;
+}
+
+/* ==========================================================================
+   CHECKOUT - SHIPPING + BILLING 
+   ========================================================================== */
+
+.orderShippingBillingPage #content_wrapper
+{
+	float: none;
+	width: auto;
+}
+
+#shipBox > .checkoutBG:first-child
+{
+	padding-bottom: 15px;
+}
+
+#shippingWrapper
+{
+	position: absolute;
+	visibility: hidden;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#shippingWrapper > .checkoutBG
+{
+	margin-bottom: 0;
+}
+
+#shippingWrapper .edit
+{
+	position: absolute;
+	right: 14px;
+	top: 4px;
+}
+
+.orderShippingBillingPage .edit 
+{
+	margin-top: 6px;
+	display: inline-block;
+}
+
+#SingleShipmentPreOrderNotification2.preOrderNotification
+{
+	height: auto !important; /* Clears the width/height that's set by some unknown JS */
+	width: auto !important;
+}
+
+/* ==========================================================================
+   CHECKOUT - EDIT OVERLAY
+   ========================================================================== */
+
+.orderShippingBillingPage #shopcartAddressForm
+{
+	width: 700px;
+	max-width: 100%;
+}
+
+.orderShippingBillingPage #shopcartAddressForm h1.large
+{
+	margin-top: 10px;
+}
+
+.orderShippingBillingPage #shopcartAddressForm .addressFormInOverlay
+{
+	padding-top: 0;
+}
+
+.orderShippingBillingPage #shopcartAddressForm .address .editSelectControls
+{
+	margin-top: 10px;
+}
+
+.orderShippingBillingPage #shopcartAddressForm .address .editSelectControls h2
+{
+	font-size: 1.077rem;
+	margin-bottom: 5px;
+}
+
+.orderShippingBillingPage #shopcartAddressForm .form_input,
+.orderShippingBillingPage #shopcartAddressForm select
+{
+	margin-bottom: 15px;
+    width: 100%;	
+}
+
+.mobile.orderShippingBillingPage #shopcartAddressForm select
+{
+	width: 100%;
+}
+
+.orderShippingBillingPage #shopcartAddressForm .denotesText
+{
+	margin-top: 8px;
+}
+
+.orderShippingBillingPage #shopcartAddressForm .content_footer
+{
+	margin-top: 12px;
+}
+
+#guestRegMain #checkoutLoginInner .errorDisplayDiv 
+{
+	color: red;
+}
+
+.orderShippingBillingPage #shopcartAddressForm span#address_line_2
+{
+	display:inline-block;
+}
+
+.orderShippingBillingPage #createOrEditAddress .checkbox
+{
+	position: relative;
+	z-index: 1;
+	text-transform: none;
+	height: auto;
+}
+
+/* ==========================================================================
+   CHECKOUT - ORDER REVIEW
+   ========================================================================== */
+
+.reviewPage #billing_summary .billing_address {
+    display: none;
+}
+
+.reviewPage .billing_method_title{
+	display: none;
+}
+
+.billing_method p {
+    margin: 0;
+}
+
+/* ==========================================================================
+   CHECKOUT - ORDER CONFIRMATION
+   ========================================================================== */
+
+.orderConfirmationPage .checkoutHeader > span
+{
+	font-weight: normal;
+}
+
+.orderConfirmationPage .orderConfMessage, .orderConfirmationPage .orderDetails
+{
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+}
+
+.orderConfirmationPage .orderDetailDetail {
+    font-weight: normal;
+}
+
+.orderConfirmationPage main h2
+{
+	margin-top: 20px;
+	padding-top: 25px;
+	border-top: 1px solid #A2A9B3;
+}
+
+.orderConfirmationPage #total_breakdown
+{
+	text-transform: uppercase;
+}
+
+.desktop.orderConfirmationPage #total_breakdown
+{
+	min-width: 300px;
+}
+
+.orderConfirmationPage #total_breakdown .primary
+{
+	margin-top: 10px;
+}
+
+.orderConfirmationPage .sr_orderConfirmation_message
+{
+	margin-top: 15px;
+}
+
+.desktop.orderConfirmationPage #billing_summary > .billing_address {
+    width: calc(50% - 7.5px);
+    margin-right: 15px;
+    float: left;
+}
+
+.orderConfirmationPage .productRow .info .inventoryMessage{
+    margin-top: 7px;
+}
+
+.orderConfirmationPage .productRow .info{
+    min-height: 144px;
+}
+
+/* ==========================================================================
+   CHECKOUT - GUEST REGISTRATION
+   ========================================================================== */
+
+#guest_user_reg_popup
+{
+	position: relative !important;
+}
+
+#guest_user_reg_popup h1
+{
+	margin-top: 0;
+}
+
+#guest_user_reg_popup .heading ul
+{
+	font-size: 1.077rem;
+}
+
+.mobile #guest_user_reg_popup .heading ul
+{
+	font-size: 0.9333rem;
+	padding-left: 16px;
+}
+
+.mobile #guest_user_reg_popup .guest_user_label
+{
+	font-size: 0.7333rem;
+}
+
+/* ==========================================================================
+   COMMON
+   ========================================================================== */
+
+form#CSRFProtectionForm {
+	margin: 0;
+}
+
+/* ==========================================================================
+   MOBILE CHECKOUT GUEST REGISTRATION
+   ========================================================================== */
+
+.mobile #guest_user_reg_popup h1
+{
+	margin-bottom: 15px;
+	line-height: normal;
+}
+
+.mobile #guest_user_reg_popup h2
+{
+	margin-bottom: 0;
+	line-height: normal;
+	letter-spacing: 1px;
+}
+
+.mobile #guest_user_reg_popup input[type=email],
+.mobile #guest_user_reg_popup input[type=password]
+{
+    width: 95%;
+}
+
+/* ==========================================================================
+   MY ACCOUNT - COMMON
+   ========================================================================== */
+
+.myAccountPage .loyatlyMessage {
+    padding-top: 20px;
+}
+
+.wishlist-address-note {
+    font-style: italic;
+    padding: 8px 0;
+}
+
+.desktop .wishlist-address-note {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.myAccountPage #box input[type="text"],
+.myAccountPage #box input[type="password"],
+.myAccountPage #box input[type="number"],
+.myAccountPage #box input[type="email"],
+.myAccountPage #box input[type="tel"],
+.myAccountPage select {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.myAccountPage .tabsContainer .orderDetailContainer .li.gridcell {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.myAccountPage .tabsContainer .orderDetailContainer .orderDetailsAccordionHeader  {
+    cursor: pointer;
+}
+
+.myAccountPage div#OrderStatusDetailPagination .text,
+.myAccountPage div#OrderStatusDetailPagination .paging {
+    vertical-align: top;
+}
+
+.myAccountPage div#OrderStatusDetailPagination .paging .prevPage,
+.myAccountPage div#OrderStatusDetailPagination .paging .nextPage {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.myAccountPage div#OrderStatusDetailPagination .paging a .prevPage,
+.myAccountPage div#OrderStatusDetailPagination .paging a .nextPage {
+    cursor: pointer;
+}
+
+.mobile.myAccountPage .tabsContainer .orderDetailContainer .li.gridcell {
+    word-break: break-word;
+}
+
+.mobile.myaccount-summary .content .primary {
+	margin-top: 10px;
+}
+
+.mobile.myaccount-summary .wishlistWrapper .primary {
+	margin-top: 0px;
+}
+
+/* ==========================================================================
+   MY ACCOUNT - ORDER HISTORY PAGE
+   ========================================================================== */
+
+.myaccount-orderstatus .canceledItemsSummary .productRow:last-child {
+   border-bottom: none;
+}
+
+.myaccount-orderstatus  .returnedItemsSummary .productPricing .unitPrice {
+    width: 33%;
+}
+
+.myaccount-orderstatus  .returnedItemsSummary .productPricing .creditProcessing {
+    width: 66%;
+}
+
+/* ==========================================================================
+   MY ACCOUNT - ADDRESS BOOK PAGE
+   ========================================================================== */
+
+.desktop.myaccount-addressbook .addrbook_header {
+    float: left;
+    width: 70%;
+}
+
+.desktop.myaccount-addressbook .action_wrapper {
+    float: right;
+    width: 25%;
+}
+
+.desktop.myaccount-addressbook .action_wrapper div {
+    line-height: 30px;
+}
+
+.desktop.myaccount-addressbook .action_wrapper .remove_button {
+    margin-right: 10px;
+}
+
+.desktop.myaccount-addressbook .action_wrapper .add_button {
+    margin-left: 10px;
+}
+
+
+.myaccount-addressbook form#AddressForm .radio {
+    vertical-align: text-top;
+}
+
+.myaccount-addressbook form#AddressForm .sbAddressRow {
+	margin-bottom: 10px;
+}
+
+.myaccount-addressbook .button_footer_line,
+.myaccount-personalinfo .button_footer_line,
+.myaccount-wishlist .button_footer_line,
+.myaccount-checkoutpreference .button_footer_line {
+    margin-top: 10px;
+}
+
+
+.desktop.myAccountPage .button_footer_line .primary {
+	float: right;
+}
+
+.desktop.myAccountPage .button_footer_line .primary.cancel {
+    margin-right: 5px;
+}
+
+.desktop.myaccount-addressbook .action_wrapper .addrbook_action,
+.desktop.myaccount-addressbook .action_wrapper .dividing_bar {
+	float: left;
+}
+
+.myAccountPage #AddressForm input[disabled] + label,
+.myaccount-checkoutpreference #my_account_shipping_method input[disabled] + label{
+    zoom: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    opacity: .25;
+}
+
+.mobile.myaccount-addressbook .button_footer_line a.primary {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.mobile.myaccount-addressbook .action_wrapper .dividing_bar {
+	display: none;
+}
+
+.mobile .required-field-outer {
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   MY ACCOUNT - PERSONAL INFORMATION PAGE
+   ========================================================================== */
+
+.myaccount-personalinfo:not(.ready) main .personalInfo
+{
+    display: none; /* Done to keep Safari from auto-filling username/password fields */
+}
+
+.myaccount-personalinfo .signInInfoContent .myaccount_header {
+    padding-top: 0;
+}
+
+.myaccount-personalinfo .employeeCheckbox {
+	height: auto !important;
+    vertical-align: text-top;
+	margin-bottom: 15px;
+}
+
+.myaccount-personalinfo .addressColumn.empColumn {
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   MY ACCOUNT - WISH LIST PAGE
+   ========================================================================== */
+
+.myaccount-wishlist .wishlistWrapper .headers {
+    display: none;
+}
+
+
+/* ==========================================================================
+   MY ACCOUNT - CHECKOUT PREFERENCES PAGE
+   ========================================================================== */
+
+.myaccount-checkoutpreference input#SameShippingAndBillingAddress {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.myaccount-checkoutpreference input#SameShippingAndBillingAddress + .unregisteredCheckbox {
+    vertical-align: text-bottom;
+}
+
+.desktop.myaccount-checkoutpreference .my_account_payment_visible .paymentColumn {
+    display: inline-block;
+    width: calc(50% - 15px);
+    margin-right: 30px;
+}
+
+.desktop.myaccount-checkoutpreference .my_account_payment_visible .paymentColumn.card-logo-container {
+    width: calc(49% - 15px);
+    margin-right: 0;
+    vertical-align: bottom;
+}
+
+.myaccount-checkoutpreference .my_account_payment_visible .paymentColumn.paymentColumn.card-logo-container {
+    margin-bottom: 15px;
+}
+
+.myaccount-checkoutpreference #expirydate .expiryColumn {
+    width: calc(50% - 7.5px);
+    margin-right: 15px;
+}
+
+.myaccount-checkoutpreference #expirydate .expiryColumn + .expiryColumn {
+    margin-right: 0;
+}
+
+.myaccount-checkoutpreference #my_account_shipping_method .control-group input {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   HELPER CLASSES
+   ========================================================================== */
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.relative { position: relative; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normalcase { text-transform: none; }
+.borderBox { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.alignLeft { text-align: left; }
+.alignCenter { text-align: center; }
+.alignRight { text-align: right; }
+.nodisplay { display: none; }
+
+.collapsable
+{
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	display: none;
+}
+
+.collapsable.open
+{
+	height: auto;
+	visibility: inherit;
+	display: block;
+}
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden,
+.spanacce
+{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus,
+.spanacce.focusable:active,
+.spanacce.focusable:focus
+{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

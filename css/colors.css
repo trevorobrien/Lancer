@@ -1,0 +1,20 @@
+
+/* Background Colors */
+.bg-softblack { background-color: #040404; }
+.bg-charcol { background-color: #121212; }
+.bg-saddlebrown { background-color: #B4A28F; }
+.bg-salmon { background-color: #FB7374; }
+.bg-whitesmoke { background-color: #fafafa; }
+.bg-white { background-color: #FFFFFF; }
+.bg-black { background-color: #000000; }
+.bg-red { background-color: tomato; }
+.bg-softwhite { background-color: #fbfbfb; }
+/* Foreground Colors */
+.fg-softblack { color: #040404; }
+.fg-charcol { color: #121212; }
+.fg-whitesmoke { color: #fafafa; }
+.fg-white { color: #FFFFFF; }
+.fg-black { color: #000000; }
+.white { color: #fff }
+
+
