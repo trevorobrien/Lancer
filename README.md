@@ -1,20 +1,52 @@
-Simple startup project using NPM scripts to get your project setup.
 
-Run NPM Install
-Then poke are package.json to see basic modules.
+# RFID JS USB Reader
 
-npm start will run a server instance
-Starting up http-server, serving ./
-Available on:
-  http://127.0.0.1:8080
-  http://192.168.0.20:8080
-Hit CTRL-C to stop the server
+Scan and read RFID tags through HID USB, passes the tag code read from Python to a local webserver and update content in the browser associated with the tag.  
 
-npm run build
-Will run tests, minify and move assets to dist folder.
+## Getting Started
 
-#The App Flow
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Notes for deployment to a live system WIP
 
-User scans RFID tag
-The Ardunio Uno passes the tag ID to serial port.
-The ID is received in Node which passes to the EvryThng API
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+npm
+
+xcode (if you get an error try running sudo xcode-select --reset)
+
+node-gyp lib available globally before you npm install (sudo if needed)
+```
+npm install node-gyp -g
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Install project dependencies
+
+```
+npm install
+```
+
+Launch web/ socket server
+
+```
+npm start
+```
+
+Launch RFID serial port reader
+
+```
+node app
+```
+
+Tested this with the GEN2 RFID ME USB reader. https://www.mtigroup.com/rfidme/
+
+
+## Deployment
+
+WIP
+
+
